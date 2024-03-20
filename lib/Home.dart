@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter/widgets.dart';
+import 'package:get/route_manager.dart';
+import 'package:trackizer/Login.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key});
@@ -12,9 +15,7 @@ class Home extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(
-                height: MediaQuery.of(context).size.height *
-                    0.0), // Adjust top padding based on screen height
+            SizedBox(height: MediaQuery.of(context).size.height * 0.0),
             const Expanded(
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -24,7 +25,7 @@ class Home extends StatelessWidget {
               ),
             ),
             const Expanded(
-              flex: 3, // Adjust flex to control the space taken by the image
+              flex: 5,
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.0),
                 child: Image(
@@ -44,6 +45,22 @@ class Home extends StatelessWidget {
                     fontSize: 12,
                   ),
                 ),
+              ),
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.8,
+              child: Padding(
+                padding: EdgeInsets.only(bottom: 20),
+                child: ElevatedButton(
+                    onPressed: () {
+                      Get.to(Login());
+                    },
+                    child: Text("Lets Get Started"),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 255, 98, 0),
+                      textStyle: const TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    )),
               ),
             ),
           ],
