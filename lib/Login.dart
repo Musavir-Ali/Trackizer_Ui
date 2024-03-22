@@ -20,6 +20,24 @@ class Login extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.0),
+            const Expanded(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: "Username",
+                    hintStyle: TextStyle(color: Colors.white),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
