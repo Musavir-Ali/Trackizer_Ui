@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
+import 'package:trackizer/Register.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key});
@@ -91,13 +93,48 @@ class Login extends StatelessWidget {
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.8,
                   child: const Padding(
-                    padding: EdgeInsets.only(bottom: 20),
+                    padding: EdgeInsets.only(top: 40),
                     child: Text(
                       "OR",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 20),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Get.to(Register());
+                      },
+                      child: Text(
+                        "Signup with E-mail",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.black,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  child: const Padding(
+                    padding: EdgeInsets.only(top: 10),
+                    child: Text(
+                      "By registering, you agree to our Terms. Learn how we collect, use and share your data",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
                       ),
                     ),
                   ),
