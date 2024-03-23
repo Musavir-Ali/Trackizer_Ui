@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:get/route_manager.dart';
 import 'package:trackizer/Login.dart';
 
@@ -55,11 +54,15 @@ class Home extends StatelessWidget {
                     onPressed: () {
                       Get.to(Login());
                     },
-                    child: Text("Lets Get Started"),
+                    child: Text(
+                      "Lets Get Started",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color.fromARGB(255, 255, 98, 0),
-                      textStyle: const TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
                     )),
               ),
             ),

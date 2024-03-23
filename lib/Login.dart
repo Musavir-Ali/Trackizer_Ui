@@ -1,45 +1,111 @@
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
-  const Login({super.key});
+  const Login({Key? key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 31, 30, 30),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            SizedBox(height: MediaQuery.of(context).size.height * 0.0),
-            const Expanded(
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.0),
-                child: Image(
-                  image: AssetImage("assets/images/logo.png"),
-                ),
-              ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.0),
+            child: Image(
+              image: AssetImage("assets/images/logo.png"),
             ),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.0),
-            const Expanded(
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: "Username",
-                    hintStyle: TextStyle(color: Colors.white),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
+          ),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.4),
+          Center(
+            child: Column(
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  child: Padding(
+                    padding: EdgeInsets.only(bottom: 20),
+                    child: ElevatedButton.icon(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.apple,
+                        color: Colors.white,
+                      ),
+                      label: Text(
+                        "Signup with Apple",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.black,
+                      ),
                     ),
                   ),
                 ),
-              ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  child: Padding(
+                    padding: EdgeInsets.only(bottom: 20),
+                    child: ElevatedButton.icon(
+                      onPressed: () {},
+                      icon: Icon(Icons.email, color: Colors.black),
+                      label: Text(
+                        "Signup with Google",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  child: Padding(
+                    padding: EdgeInsets.only(bottom: 20),
+                    child: ElevatedButton.icon(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.facebook,
+                        color: Colors.white,
+                      ),
+                      label: Text(
+                        "Signup with Facebook",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blue,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  child: const Padding(
+                    padding: EdgeInsets.only(bottom: 20),
+                    child: Text(
+                      "OR",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
