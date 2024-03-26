@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/route_manager.dart';
+import 'package:trackizer/Subscriptions.dart';
 
 class Signin extends StatefulWidget {
   const Signin({super.key});
@@ -105,7 +107,9 @@ class _SigninState extends State<Signin> {
             ),
             SizedBox(
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(Subs());
+                },
                 child: Text(
                   "Sign In",
                   style: TextStyle(

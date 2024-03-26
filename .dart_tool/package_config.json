@@ -20,6 +20,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "circular_seek_bar",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/circular_seek_bar-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "clock",
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/clock-1.1.1",
       "packageUri": "lib/",
@@ -36,6 +42,12 @@
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.6",
       "packageUri": "lib/",
       "languageVersion": "2.19"
+    },
+    {
+      "name": "curved_navigation_bar",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/curved_navigation_bar-1.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "fake_async",
@@ -176,7 +188,7 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-03-23T23:11:04.256327Z",
+  "generated": "2024-03-26T18:55:50.236462Z",
   "generator": "pub",
   "generatorVersion": "3.3.2"
 }
