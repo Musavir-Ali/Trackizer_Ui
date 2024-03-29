@@ -4,6 +4,7 @@ import 'package:circular_seek_bar/circular_seek_bar.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
+import 'package:trackizer/Tab_Sub.dart';
 
 class Subs extends StatefulWidget {
   const Subs({Key? key}) : super(key: key);
@@ -240,36 +241,33 @@ class _SubsState extends State<Subs> {
                 color: Color.fromARGB(255, 31, 30, 30),
                 child: Stack(
                   children: [
-                    SingleChildScrollView(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: Column(
-                          children: [
-                            const SizedBox(
-                              height: 5,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Column(
+                        children: [
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          Container(
+                            height: 40,
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(10),
                             ),
-                            Container(
-                              height: 40,
-                              width: MediaQuery.of(context).size.height,
-                              decoration: BoxDecoration(
-                                color: Colors.black,
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: const TabBar(
-                                  indicatorColor: Colors.white,
-                                  labelColor: Colors.white,
-                                  dividerColor: Colors.transparent,
-                                  tabs: [
-                                    Tab(
-                                      text: "Subscriptions",
-                                    ),
-                                    Tab(
-                                      text: "Upcooming Bills",
-                                    ),
-                                  ]),
-                            ),
-                          ],
-                        ),
+                            child: TabBar(
+                                indicatorColor: Colors.white,
+                                labelColor: Colors.white,
+                                dividerColor: Colors.transparent,
+                                tabs: [
+                                  Tab(
+                                    text: "Subscriptions",
+                                  ),
+                                  Tab(
+                                    text: "Upcomming Bills",
+                                  ),
+                                ]),
+                          ),
+                        ],
                       ),
                     ),
                   ],
