@@ -210,7 +210,7 @@ class _SubsState extends State<Subs> {
                               Text(
                                 "\$118",
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color: Colors.black,
                                   fontSize: 12,
                                 ),
                               ),
