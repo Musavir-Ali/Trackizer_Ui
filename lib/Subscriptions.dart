@@ -15,7 +15,7 @@ class _SubsState extends State<Subs> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 2,
-      initialIndex: 1,
+      initialIndex: 0,
       child: Scaffold(
         body: Column(
           children: [
@@ -131,13 +131,13 @@ class _SubsState extends State<Subs> {
                                 color: const Color(0xFF83839C),
                               ),
                             ),
-                            child: Column(
+                            child: const Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   "Active Subs",
                                   style: TextStyle(
-                                    color: const Color(0xFF83839C),
+                                    color: Color(0xFF83839C),
                                     fontSize: 12,
                                   ),
                                 ),
@@ -191,13 +191,13 @@ class _SubsState extends State<Subs> {
                                 color: const Color(0xFF83839C),
                               ),
                             ),
-                            child: Column(
+                            child: const Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
                                   "Lowest Sub",
                                   style: TextStyle(
-                                    color: const Color(0xFF83839C),
+                                    color: Color(0xFF83839C),
                                     fontSize: 12,
                                   ),
                                 ),
@@ -221,14 +221,14 @@ class _SubsState extends State<Subs> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.5,
               child: Container(
-                color: Color.fromARGB(255, 31, 30, 30),
+                color: const Color.fromARGB(255, 31, 30, 30),
                 child: Stack(
                   children: [
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: Column(
                         children: [
-                          SizedBox(
+                          const SizedBox(
                             height: 5,
                           ),
                           Container(
@@ -252,38 +252,146 @@ class _SubsState extends State<Subs> {
                               ],
                             ),
                           ),
+                          const SizedBox(height: 25),
                           Expanded(
                             child: TabBarView(
                               children: [
+                                // Subscriptions Tab
                                 ListView.builder(
                                   scrollDirection: Axis.vertical,
                                   physics: const BouncingScrollPhysics(),
-                                  itemCount: 2,
+                                  itemCount: 5,
                                   itemBuilder: (context, index) {
-                                    return ListTile(
-                                      title: Text("data"),
+                                    List<String> subscriptionNames = [
+                                      "Spotify Premium",
+                                      "Youtube Premium",
+                                      "Microsoft 365",
+                                      "iCloud",
+                                      "Netflix",
+                                    ];
+                                    List<String> subscriptionImages = [
+                                      "assets/images/spotify.png",
+                                      "assets/images/Yt.png",
+                                      "assets/images/Microsoft.png",
+                                      "assets/images/icloud.png",
+                                      "assets/images/Netflix.png",
+                                    ];
+
+                                    List<String> subscriptionAmounts = [
+                                      "\$9.99",
+                                      "\$11.99",
+                                      "\$6.99",
+                                      "\$2.99",
+                                      "\$15.99",
+                                    ];
+
+                                    return Card(
+                                      color: Colors.transparent,
+                                      elevation: 0,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(8),
+                                        side: BorderSide(
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      child: ListTile(
+                                        leading: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                          child: Image.asset(
+                                            subscriptionImages[index],
+                                            width: 40,
+                                            height: 40,
+                                            fit: BoxFit.contain,
+                                          ),
+                                        ),
+                                        title: Text(
+                                          subscriptionNames[index],
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                        trailing: Text(
+                                          subscriptionAmounts[index],
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.red,
+                                          ),
+                                        ),
+                                      ),
                                     );
                                   },
                                 ),
-                                SingleChildScrollView(
-                                  scrollDirection: Axis.horizontal,
+                                ListView.builder(
+                                  scrollDirection: Axis.vertical,
                                   physics: const BouncingScrollPhysics(),
-                                  child: Column(
-                                    children: List.generate(2, (index) {
-                                      return SizedBox(
-                                        width:
-                                            MediaQuery.of(context).size.width *
-                                                0.8,
-                                        child: Card(
-                                          color:
-                                              Color.fromARGB(255, 31, 30, 30),
-                                          child: ListTile(
-                                            title: Text("data"),
+                                  itemCount: 5,
+                                  itemBuilder: (context, index) {
+                                    List<String> subscriptionNames = [
+                                      "Spotify Premium",
+                                      "Youtube Premium",
+                                      "Microsoft 365",
+                                      "iCloud",
+                                      "Netflix",
+                                    ];
+                                    List<String> subscriptionImages = [
+                                      "assets/images/jan25.png",
+                                      "assets/images/jan25.png",
+                                      "assets/images/jan25.png",
+                                      "assets/images/jan25.png",
+                                      "assets/images/jan25.png",
+                                    ];
+
+                                    List<String> subscriptionAmounts = [
+                                      "\$9.99",
+                                      "\$11.99",
+                                      "\$6.99",
+                                      "\$2.99",
+                                      "\$15.99",
+                                    ];
+
+                                    return Card(
+                                      color: Colors.transparent,
+                                      elevation: 0,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(8),
+                                        side: BorderSide(
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      child: ListTile(
+                                        leading: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                          child: Image.asset(
+                                            subscriptionImages[index],
+                                            width: 40,
+                                            height: 40,
+                                            fit: BoxFit.contain,
                                           ),
                                         ),
-                                      );
-                                    }),
-                                  ),
+                                        title: Text(
+                                          subscriptionNames[index],
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                        trailing: Text(
+                                          subscriptionAmounts[index],
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.red,
+                                          ),
+                                        ),
+                                      ),
+                                    );
+                                  },
                                 ),
                               ],
                             ),
