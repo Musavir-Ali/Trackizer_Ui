@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:circular_seek_bar/circular_seek_bar.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:trackizer/Spendings.dart';
 
 class Subs extends StatefulWidget {
   const Subs({Key? key}) : super(key: key);
@@ -114,19 +115,19 @@ class _SubsState extends State<Subs> {
                         ),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       bottom: 0,
                       left: 0,
                       right: 0,
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             SubscriptionInfo(
                               label: "Active Subs",
-                              value: "3",
+                              value: "5",
                             ),
                             SubscriptionInfo(
                               label: "Highest Sub",
@@ -226,6 +227,28 @@ class _SubsState extends State<Subs> {
           ],
           onTap: (index) {
             // Handle navigation here based on the tapped index
+
+            switch (index) {
+              case 0:
+                // Navigate to Home page
+                break;
+              case 1:
+                // Navigate to Apps page (Spendings)
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Spendings()),
+                );
+                break;
+              case 2:
+                // Add your logic for the third icon
+                break;
+              case 3:
+                // Add your logic for the fourth icon
+                break;
+              case 4:
+                // Add your logic for the fifth icon
+                break;
+            }
           },
         ),
       ),
