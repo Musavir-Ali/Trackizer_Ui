@@ -24,13 +24,14 @@ class _SubsState extends State<Subs> {
             Expanded(
               flex: 5,
               child: Container(
-                color: Color.fromARGB(255, 31, 30, 30),
+                color: Colors.black,
                 child: Stack(
                   children: [
                     Center(
                       child: CircularSeekBar(
+                        animDurationMillis: 5000,
                         width: double.infinity,
-                        trackColor: Colors.grey,
+                        trackColor: Color.fromARGB(255, 31, 30, 30),
                         outerThumbColor: const Color(0xFF83839C),
                         height: 240,
                         progress: _progress,
@@ -93,7 +94,8 @@ class _SubsState extends State<Subs> {
                                   ),
                                 ),
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: const Color(0xFF83839C),
+                                  backgroundColor:
+                                      Color.fromARGB(255, 31, 30, 30),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20),
                                   ),
@@ -148,7 +150,7 @@ class _SubsState extends State<Subs> {
             Expanded(
               flex: 5,
               child: Container(
-                color: const Color.fromARGB(255, 31, 30, 30),
+                color: Colors.black,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Column(
@@ -159,7 +161,7 @@ class _SubsState extends State<Subs> {
                       Container(
                         height: 40,
                         decoration: BoxDecoration(
-                          color: Colors.black,
+                          color: Color.fromARGB(255, 31, 30, 30),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: const TabBar(
@@ -195,7 +197,7 @@ class _SubsState extends State<Subs> {
         ),
         bottomNavigationBar: CurvedNavigationBar(
           height: 50,
-          backgroundColor: Color.fromARGB(255, 31, 30, 30),
+          backgroundColor: Colors.black,
           color: Color.fromRGBO(78, 78, 97, 100),
           buttonBackgroundColor: Color.fromARGB(255, 255, 98, 0),
           items: <Widget>[
@@ -226,21 +228,24 @@ class _SubsState extends State<Subs> {
             ),
           ],
           onTap: (index) {
-            // Handle navigation here based on the tapped index
+            
 
             switch (index) {
               case 0:
-                // Navigate to Home page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Subs()),
+                );
                 break;
               case 1:
-                // Navigate to Apps page (Spendings)
+                
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Spendings()),
                 );
                 break;
               case 2:
-                // Add your logic for the third icon
+                
                 break;
               case 3:
                 // Add your logic for the fourth icon
@@ -396,11 +401,10 @@ class SubscriptionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.transparent,
+      color: Color.fromARGB(255, 31, 30, 30),
       elevation: 0,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(8),
-        side: BorderSide(color: Colors.white),
       ),
       child: ListTile(
         leading: ClipRRect(
