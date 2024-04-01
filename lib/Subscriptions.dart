@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:circular_seek_bar/circular_seek_bar.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:trackizer/Spendings.dart';
+
 
 class Subs extends StatefulWidget {
   const Subs({Key? key}) : super(key: key);
@@ -12,7 +11,8 @@ class Subs extends StatefulWidget {
 
 class _SubsState extends State<Subs> {
   double _progress = 76;
-
+  
+  
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -195,67 +195,7 @@ class _SubsState extends State<Subs> {
             ),
           ],
         ),
-        bottomNavigationBar: CurvedNavigationBar(
-          height: 50,
-          backgroundColor: Colors.black,
-          color: Color.fromRGBO(78, 78, 97, 100),
-          buttonBackgroundColor: Color.fromARGB(255, 255, 98, 0),
-          items: <Widget>[
-            Icon(
-              Icons.home,
-              size: 20,
-              color: Colors.white,
-            ),
-            Icon(
-              Icons.apps,
-              size: 20,
-              color: Colors.white,
-            ),
-            Icon(
-              Icons.add,
-              size: 20,
-              color: Colors.white,
-            ),
-            Icon(
-              Icons.calendar_month,
-              size: 20,
-              color: Colors.white,
-            ),
-            Icon(
-              Icons.wallet,
-              size: 20,
-              color: Colors.white,
-            ),
-          ],
-          onTap: (index) {
-            
-
-            switch (index) {
-              case 0:
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Subs()),
-                );
-                break;
-              case 1:
-                
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Spendings()),
-                );
-                break;
-              case 2:
-                
-                break;
-              case 3:
-                // Add your logic for the fourth icon
-                break;
-              case 4:
-                // Add your logic for the fifth icon
-                break;
-            }
-          },
-        ),
+        
       ),
     );
   }
