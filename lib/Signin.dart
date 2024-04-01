@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/route_manager.dart';
+import 'package:trackizer/Bottom_Nav.dart';
 import 'package:trackizer/Subscriptions.dart';
 
 class Signin extends StatefulWidget {
@@ -108,7 +109,7 @@ class _SigninState extends State<Signin> {
             SizedBox(
               child: ElevatedButton(
                 onPressed: () {
-                  Get.to(Subs());
+                  Get.to(NavBar());
                 },
                 child: Text(
                   "Sign In",
