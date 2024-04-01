@@ -365,9 +365,48 @@ class Calender extends StatelessWidget {
               ),
             ),
             // SizedBox(
-            //   height: MediaQuery.of(context).size.height ,
+            //   height: 20,
+            // ),
+            // SizedBox(
+            //   height: MediaQuery.of(context).size.height,
             //   width: MediaQuery.of(context).size.width * 0.9,
-            //   child: GridView.builder(gridDelegate: , itemBuilder: 3),
+            //   child: GridView.count(
+            //     crossAxisCount: 2,
+            //     crossAxisSpacing: 10,
+            //     mainAxisSpacing: 10,
+            //     children: [
+            //       Container(
+            //         width: 60,
+            //         height: 60,
+            //         decoration: BoxDecoration(
+            //           color: Color.fromRGBO(78, 78, 97, 20),
+            //           borderRadius: BorderRadius.all(
+            //             Radius.circular(15),
+            //           ),
+            //         ),
+            //       ),
+            //       Container(
+            //         width: 60,
+            //         height: 60,
+            //         decoration: BoxDecoration(
+            //           color: Color.fromRGBO(78, 78, 97, 20),
+            //           borderRadius: BorderRadius.all(
+            //             Radius.circular(15),
+            //           ),
+            //         ),
+            //       ),
+            //       Container(
+            //         width: 60,
+            //         height: 60,
+            //         decoration: BoxDecoration(
+            //           color: Color.fromRGBO(78, 78, 97, 20),
+            //           borderRadius: BorderRadius.all(
+            //             Radius.circular(15),
+            //           ),
+            //         ),
+            //       ),
+            //     ],
+            //   ),
             // ),
           ],
         ),
