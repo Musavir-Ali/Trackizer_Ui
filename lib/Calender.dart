@@ -12,6 +12,7 @@ class Calender extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: const Color.fromARGB(255, 31, 30, 30),
         elevation: 0,
         title: const Text(
@@ -35,7 +36,7 @@ class Calender extends StatelessWidget {
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height * 0.4,
+              height: MediaQuery.of(context).size.height * 0.39,
               decoration: const BoxDecoration(
                   color: Color.fromARGB(255, 31, 30, 30),
                   borderRadius: BorderRadius.only(
@@ -168,7 +169,7 @@ class Calender extends StatelessWidget {
                           Container(
                             width: 60,
                             height: 100,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Color.fromRGBO(78, 78, 97, 20),
                               borderRadius: BorderRadius.all(
                                 Radius.circular(15),
@@ -199,11 +200,11 @@ class Calender extends StatelessWidget {
                               ),
                             ]),
                           ),
-                          SizedBox(width: 8),
+                          const SizedBox(width: 8),
                           Container(
                             width: 60,
                             height: 100,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Color.fromRGBO(78, 78, 97, 20),
                               borderRadius: BorderRadius.all(
                                 Radius.circular(15),
@@ -234,11 +235,11 @@ class Calender extends StatelessWidget {
                               ),
                             ]),
                           ),
-                          SizedBox(width: 8),
+                          const SizedBox(width: 8),
                           Container(
                             width: 60,
                             height: 100,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Color.fromRGBO(78, 78, 97, 20),
                               borderRadius: BorderRadius.all(
                                 Radius.circular(15),
@@ -269,11 +270,11 @@ class Calender extends StatelessWidget {
                               ),
                             ]),
                           ),
-                          SizedBox(width: 8),
+                          const SizedBox(width: 8),
                           Container(
                             width: 60,
                             height: 100,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Color.fromRGBO(78, 78, 97, 20),
                               borderRadius: BorderRadius.all(
                                 Radius.circular(15),
@@ -311,7 +312,63 @@ class Calender extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.08,
+              width: MediaQuery.of(context).size.width,
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    children: [
+                      SizedBox(height: 8),
+                      Padding(
+                        padding: EdgeInsets.only(left: 8),
+                        child: Text("Janurary",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            )),
+                      ),
+                      SizedBox(height: 2),
+                      Text("8.01.2024",
+                          style: TextStyle(
+                            color: Color.fromRGBO(162, 162, 181, 100),
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                          )),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      SizedBox(height: 8),
+                      Text("\$24.98",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          )),
+                      SizedBox(height: 2),
+                      Padding(
+                        padding: EdgeInsets.only(right: 8),
+                        child: Text("upcoming bills",
+                            style: TextStyle(
+                              color: Color.fromRGBO(162, 162, 181, 100),
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                            )),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            // SizedBox(
+            //   height: MediaQuery.of(context).size.height ,
+            //   width: MediaQuery.of(context).size.width * 0.9,
+            //   child: GridView.builder(gridDelegate: , itemBuilder: 3),
+            // ),
           ],
         ),
       ),
