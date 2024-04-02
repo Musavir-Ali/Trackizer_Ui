@@ -374,31 +374,136 @@ class Calender extends StatelessWidget {
                   Container(
                     width: 60,
                     height: 60,
-                    decoration: BoxDecoration(
-                      color: Color.fromRGBO(78, 78, 97, 20),
+                    decoration: const BoxDecoration(
+                      color: Color.fromRGBO(78, 78, 97, 100),
                       borderRadius: BorderRadius.all(
                         Radius.circular(15),
                       ),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            width: 40,
+                            height: 40,
+                            child: Image.asset('assets/images/Netflix.png',
+                                alignment: Alignment.topLeft,
+                                width: 100,
+                                height: 100),
+                          ),
+                        ),
+                        SizedBox(height: 25),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8),
+                          child: const Text("Netflix",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold,
+                              )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: const Text("\$18.99",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              )),
+                        ),
+                      ],
                     ),
                   ),
                   Container(
                     width: 60,
                     height: 60,
                     decoration: BoxDecoration(
-                      color: Color.fromRGBO(78, 78, 97, 20),
+                      color: Color.fromRGBO(78, 78, 97, 100),
                       borderRadius: BorderRadius.all(
                         Radius.circular(15),
                       ),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            width: 40,
+                            height: 40,
+                            child: Image.asset('assets/images/Yt.png',
+                                alignment: Alignment.topLeft,
+                                width: 100,
+                                height: 100),
+                          ),
+                        ),
+                        SizedBox(height: 25),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8),
+                          child: const Text("Youtube",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold,
+                              )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: const Text("\$9.99",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              )),
+                        ),
+                      ],
                     ),
                   ),
                   Container(
                     width: 60,
                     height: 60,
                     decoration: BoxDecoration(
-                      color: Color.fromRGBO(78, 78, 97, 20),
+                      color: Color.fromRGBO(78, 78, 97, 100),
                       borderRadius: BorderRadius.all(
                         Radius.circular(15),
                       ),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            width: 40,
+                            height: 40,
+                            child: Image.asset('assets/images/sub_spotify.png',
+                                alignment: Alignment.topLeft,
+                                width: 100,
+                                height: 100),
+                          ),
+                        ),
+                        SizedBox(height: 25),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8),
+                          child: const Text("Spotify",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold,
+                              )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: const Text("\$12.99",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              )),
+                        ),
+                      ],
                     ),
                   ),
                 ],

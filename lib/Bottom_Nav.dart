@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:trackizer/Add.dart';
 import 'package:trackizer/Calender.dart';
 import 'package:trackizer/CreditCard.dart';
 import 'package:trackizer/Spendings.dart';
@@ -13,7 +14,13 @@ class NavBar extends StatefulWidget {
 }
 
 int _page = 0;
-final screens = [Subs(), Spendings(), CreditCard(), Calender()];
+final screens = [
+  Subs(),
+  Spendings(),
+  Add(),
+  Calender(),
+  CreditCard(),
+];
 
 class _NavBarState extends State<NavBar> {
   @override
