@@ -1,8 +1,4 @@
-import 'dart:html';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Calender extends StatelessWidget {
   const Calender({super.key});
@@ -364,50 +360,50 @@ class Calender extends StatelessWidget {
                 ],
               ),
             ),
-            // SizedBox(
-            //   height: 20,
-            // ),
-            // SizedBox(
-            //   height: MediaQuery.of(context).size.height,
-            //   width: MediaQuery.of(context).size.width * 0.9,
-            //   child: GridView.count(
-            //     crossAxisCount: 2,
-            //     crossAxisSpacing: 10,
-            //     mainAxisSpacing: 10,
-            //     children: [
-            //       Container(
-            //         width: 60,
-            //         height: 60,
-            //         decoration: BoxDecoration(
-            //           color: Color.fromRGBO(78, 78, 97, 20),
-            //           borderRadius: BorderRadius.all(
-            //             Radius.circular(15),
-            //           ),
-            //         ),
-            //       ),
-            //       Container(
-            //         width: 60,
-            //         height: 60,
-            //         decoration: BoxDecoration(
-            //           color: Color.fromRGBO(78, 78, 97, 20),
-            //           borderRadius: BorderRadius.all(
-            //             Radius.circular(15),
-            //           ),
-            //         ),
-            //       ),
-            //       Container(
-            //         width: 60,
-            //         height: 60,
-            //         decoration: BoxDecoration(
-            //           color: Color.fromRGBO(78, 78, 97, 20),
-            //           borderRadius: BorderRadius.all(
-            //             Radius.circular(15),
-            //           ),
-            //         ),
-            //       ),
-            //     ],
-            //   ),
-            // ),
+            SizedBox(
+              height: 20,
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.3,
+              width: MediaQuery.of(context).size.width * 0.9,
+              child: GridView.count(
+                crossAxisCount: 2,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+                children: [
+                  Container(
+                    width: 60,
+                    height: 60,
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(78, 78, 97, 20),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(15),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 60,
+                    height: 60,
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(78, 78, 97, 20),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(15),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 60,
+                    height: 60,
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(78, 78, 97, 20),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(15),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

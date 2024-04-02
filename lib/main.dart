@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const GetMaterialApp(
-      home: Calender(),
+      home: Home(),
       debugShowCheckedModeBanner: false,
     );
   }
