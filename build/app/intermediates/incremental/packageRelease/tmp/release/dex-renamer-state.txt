@@ -1,0 +1,4 @@
+#Wed Apr 03 00:27:44 PKT 2024
+base.0=/Users/mac/Desktop/Trackizer_Ui/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

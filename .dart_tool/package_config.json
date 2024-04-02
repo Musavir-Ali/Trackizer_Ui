@@ -80,6 +80,12 @@
       "languageVersion": "2.15"
     },
     {
+      "name": "ionicons",
+      "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/ionicons-0.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "leak_tracker",
       "rootUri": "file:///Users/mac/.pub-cache/hosted/pub.dev/leak_tracker-10.0.0",
       "packageUri": "lib/",
@@ -188,7 +194,7 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-03-26T18:55:50.236462Z",
+  "generated": "2024-04-02T18:55:50.531663Z",
   "generator": "pub",
   "generatorVersion": "3.3.2"
 }

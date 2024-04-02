@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:circular_seek_bar/circular_seek_bar.dart';
-
+import 'package:get/route_manager.dart';
+import 'package:trackizer/Settings.dart';
 
 class Subs extends StatefulWidget {
   const Subs({Key? key}) : super(key: key);
@@ -11,8 +12,7 @@ class Subs extends StatefulWidget {
 
 class _SubsState extends State<Subs> {
   double _progress = 76;
-  
-  
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -110,7 +110,9 @@ class _SubsState extends State<Subs> {
                       top: 0,
                       right: 0,
                       child: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(Settings());
+                        },
                         icon: Icon(
                           Icons.settings,
                           color: Colors.white,
@@ -195,7 +197,6 @@ class _SubsState extends State<Subs> {
             ),
           ],
         ),
-        
       ),
     );
   }

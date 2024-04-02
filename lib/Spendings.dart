@@ -17,13 +17,13 @@ class _SpendingsState extends State<Spendings> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        automaticallyImplyLeading: false, 
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.black,
         elevation: 0,
         title: const Text(
           'Spendings & Budgets',
           style: TextStyle(
-            color: Colors.white,
+            color: Color.fromRGBO(162, 162, 181, 100),
             fontSize: 16,
           ),
         ),

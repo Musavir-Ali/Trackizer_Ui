@@ -8,13 +8,12 @@ class Calender extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         backgroundColor: const Color.fromARGB(255, 31, 30, 30),
         elevation: 0,
         title: const Text(
           'Calender',
           style: TextStyle(
-            color: Colors.white,
+            color: Color.fromRGBO(162, 162, 181, 100),
             fontSize: 16,
           ),
         ),
